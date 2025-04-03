@@ -1,4 +1,5 @@
 from typing import cast, Any
+
 import Rhino.Geometry as rg #type:ignore
 import math
 
@@ -21,6 +22,29 @@ a= pointList1
 
 pointList2 = []
 
-#fil pointList2 list  
+# make another list where all points are displaced in the y direction
+# by y_points amount
+
+for i in range(x_points):
+    pointList2.append(rg.Point3d(i, y_points, 0))
+
+b= pointList2
+
+# connect points of both lists with a line and store them in a list
+lineList = []
+for i in range(x_points):
+    lineList.append(rg.LineCurve(pointList1[i], pointList2[i]))
+    
+c= lineList
+
+
+# divide those lines into n amount of points and store them in a list of list
+# called allDivPts
+
+
+
+
+
+
 
 
